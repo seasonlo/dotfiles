@@ -5,6 +5,7 @@
             "alignment": "left",
             "segments": [
                 {
+                    "foreground": "white",
                     "type": "python",
                     "style": "plain",
                     "template": "{{ if .Error }}{{ else }}{{ if .Venv }}({{ .Venv }}){{ end }}{{ end }} ",
@@ -17,18 +18,19 @@
                     }
                 },
                 {
-                    "foreground": "#45F1C2",
+                    "foreground": "cyan",
                     "style": "plain",
                     "template": "{{ .UserName }}",
                     "type": "session"
                 },
                 {
+                    "foreground": "white",
                     "style": "plain",
                     "template": ":",
                     "type": "text"
                 },
                 {
-                    "foreground": "#56B6C2",
+                    "foreground": "blue",
                     "properties": {
                         "style": "folder"
                     },
@@ -37,7 +39,7 @@
                     "type": "path"
                 },
                 {
-                    "foreground": "#D0666F",
+                    "foreground": "red",
                     "properties": {
                         "branch_icon": ""
                     },
@@ -46,9 +48,9 @@
                     "type": "git"
                 },
                 {
-                    "foreground": "#C2F78D",
+                    "foreground": "green",
                     "foreground_templates": [
-                        "{{ if gt .Code 0 }}#D0666F{{ end }}"
+                        "{{ if gt .Code 0 }}red{{ end }}"
                     ],
                     "style": "plain",
                     "template": ">",
