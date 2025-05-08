@@ -10,7 +10,7 @@ To create symbolic links for all `.omp.json` theme files in the current director
 
 ```powershell
 Get-ChildItem -Filter "*.omp.json" | ForEach-Object {
-    New-Item -ItemType SymbolicLink -Path "$env:POSH_THEMES_PATH\$($_.Name)" -Target $_.FullName -Force
+    New-Item -ItemType SymbolicLink -Path "$env:LOCALAPPDATA\Programs\oh-my-posh\themes\$($_.Name)" -Target $_.FullName -Force
 }
 ```
 
